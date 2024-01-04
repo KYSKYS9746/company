@@ -1,0 +1,27 @@
+.default {
+    padding: 100px 0;
+}
+
+.default .title {
+    text-align: center;
+    word-break: keep-all;
+}
+
+.default .title h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.default .title p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 40px 0;
+}
+
+.default .inner {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
