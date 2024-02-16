@@ -30,6 +30,14 @@
     gap: 60px;
 }
 
+.header .header_wrap .gnb>ul>li {
+    font-weight: 600;
+}
+
+.header .header_wrap .util a i {
+    font-weight: 600;
+}
+
 /* .header .header_wrap .util {
     margin: 0 0 0 auto;
 } */
@@ -205,7 +213,7 @@
     content: "";
     position: absolute;
     top: -60px;
-    left: 50%;
+    left: 56%;
     transform: translate(-50%, 0);
     width: 1px;
     height: 50px;
@@ -217,7 +225,7 @@
     content: "";
     position: absolute;
     top: -60px;
-    left: 50%;
+    left: 56%;
     transform: translate(-50%, 0);
     width: 6px;
     height: 6px;
@@ -231,11 +239,11 @@
 
 @keyframes scroll {
     0% {
-        transform: translate(-50%, 0);
+        transform: translate(-56%, 0);
     }
 
     100% {
-        transform: translate(-50%, 50px) scale(1.2);
+        transform: translate(-56%, 50px) scale(1.2);
     }
 
 }
@@ -267,7 +275,7 @@
     border-radius: 50%;
     background: #ffcb00;
     font-size: 24px;
-    margin: 0 0 12px 0;
+    margin: 0 0 20px 0;
     font-weight: 100;
     padding: 12px;
 }
@@ -275,8 +283,8 @@
 .MainCare .MainCareinner figure strong {
     display: block;
     font-size: 24px;
-    font-weight: 500;
-    margin: 0 0 16px 0;
+    font-weight: 600;
+    margin: 0 0 20px 0;
     word-break: keep-all;
 }
 
@@ -325,7 +333,7 @@
     background: #ffcb00;
 }
 
-.MainIntroduce .inner_box .inner {
+.MainIntroduce .inner_box .inner .countUp {
     max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
@@ -333,21 +341,22 @@
 
 }
 
-.MainIntroduce .inner_box .inner .txt {
+.MainIntroduce .inner_box .inner .countUp .txt {
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 60px 0;
     word-break: keep-all;
 }
 
-.MainIntroduce .inner_box .inner .txt h2 {
+.MainIntroduce .inner_box .inner .countUp .txt strong {
+    display: block;
     font-size: 20px;
-    margin: 0 0 24px 0;
+    margin: 0 0 20px 0;
 }
 
-.MainIntroduce .inner_box .inner .txt p {
-    font-size: 32px;
+.MainIntroduce .inner_box .inner .countUp .count_number {
+    font-size: 40px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 900;
 }
 
 @media (max-width:768px) {
@@ -355,7 +364,7 @@
         background: #ffcb00;
     }
 
-    .MainIntroduce .inner_box .inner {
+    .MainIntroduce .inner_box .inner .countUp {
         max-width: 1200px;
         padding: 20px 15px;
         margin: 0 auto;
@@ -367,12 +376,12 @@
         padding: 12px 0;
     }
 
-    .MainIntroduce .inner_box .inner .txt h2 {
+    .MainIntroduce .inner_box .inner .txt strong {
         font-size: 20px;
         margin: 0 0 16px 0;
     }
 
-    .MainIntroduce .inner_box .inner .txt p {
+    .MainIntroduce .inner_box .inner .txt .count_number {
         font-size: 32px;
         text-align: center;
         font-weight: 500;
@@ -397,6 +406,34 @@
 
 .MainService .inner .box img {}
 
+.MainService .inner .box {
+    position: relative;
+}
+
+.MainService .inner .box:nth-child(odd) .left:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 10px;
+    height: 10px;
+    border-top: 10px solid #ffcb00;
+    border-left: 10px solid #ffcb00;
+}
+
+
+
+.MainService .inner .box:nth-child(even) .left:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 10px;
+    height: 10px;
+    border-bottom: 10px solid #ffcb00;
+    border-right: 10px solid #ffcb00;
+}
+
 .MainService .inner .slogan {
     padding: 160px 0;
     word-break: keep-all;
@@ -410,22 +447,28 @@
     display: block;
     color: #ffcb00;
     font-weight: 500;
-    margin: 0 0 16px 0;
+    font-size: 20px;
+    margin: 0 0 20px 0;
 }
 
 .MainService .inner strong {
     display: block;
-    font-size: 24px;
+    font-size: 44px;
     font-weight: 700;
-    margin: 0 0 16px 0;
+    margin: 0 0 20px 0;
 }
 
 .MainService .inner .box:nth-child(even) .left {
     order: 1;
 }
 
-@media (max-width:768px) {
 
+
+@media (max-width:768px) {
+    .MainService .title h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
 
     .MainService .inner {
         /* display: flex; */
@@ -445,6 +488,10 @@
     }
 
     .MainService .inner .box img {}
+
+    .MainService .inner .box .right {
+        margin: 24px 0 0 0;
+    }
 
     .MainService .inner .slogan {
         padding: 40px 0;
@@ -478,25 +525,24 @@
     text-align: center;
 }
 
-.Mainconsultation .inner h2 {
+.Mainconsultation .inner a strong {
     display: inline-block;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
     border: 1px solid #ffcb00;
     border-radius: 50px;
     background: #ffcb00;
-    padding: 16px 40px;
+    padding: 20px 52px;
     margin: 0 0 24px 0;
     word-break: keep-all;
 }
 
-.Mainconsultation .inner h2:hover {
+.Mainconsultation .inner a strong:hover {
     background: #fff;
 }
 
 .Mainconsultation .inner p {
     font-size: 18px;
-    font-weight: 300;
     word-break: keep-all;
 }
 
@@ -521,7 +567,6 @@
     gap: 30px;
     justify-content: center;
     margin: 0 0 16px 0;
-    font-weight: 300;
 
 }
 
@@ -542,7 +587,7 @@
 }
 
 .import {
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .footer .inner .util {
@@ -568,4 +613,40 @@
     .footer .inner .copy {
         font-size: 2vw;
     }
+}
+
+.totop {
+    position: fixed;
+    bottom: 250px;
+    right: -250px;
+    background: transparent;
+    border: none;
+
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+
+}
+
+.totop.on {
+    right: 100px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.totop i {
+    padding: 12px;
+    background: #202124;
+    color: #ffcb00;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+@media (max-width:768px) {
+
+    .totop {
+        display: none;
+    }
+
 }

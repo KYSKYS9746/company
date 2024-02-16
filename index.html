@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>펌킨컴퍼니</title>
 
+    <link rel="shortcut icon" href="./images/LOGO.svg" type="image/x-icon">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/common.css">
@@ -15,6 +16,8 @@
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/waypoints.min.js"></script>
+    <script src="./js/jquery.counterup.min.js"></script>
     <script src="./js/custom.js"></script>
 </head>
 
@@ -87,18 +90,21 @@
             <section class="MainIntroduce">
                 <div class="inner_box">
                     <div class="inner">
-                        <div class="txt01 txt">
-                            <h2>펌킨 펫하우스 지점수</h2>
-                            <p>2</p>
+                        <div class="countUp">
+                            <div class="txt01 txt">
+                                <strong>펌킨 펫하우스 지점수</strong>
+                                <div class="count_number">2</div>
+                            </div>
+                            <div class="txt02 txt">
+                                <strong>펌킨 펫하우스 원아수</strong>
+                                <div class="count_number">2046</div>
+                            </div>
+                            <div class="txt03 txt">
+                                <strong>펌킨 선생님 수</strong>
+                                <div class="count_number">12</div>
+                            </div>
                         </div>
-                        <div class="txt02 txt">
-                            <h2>펌킨 펫하우스 원아수</h2>
-                            <p>2046</p>
-                        </div>
-                        <div class="txt03 txt">
-                            <h2>펌킨 선생님 수</h2>
-                            <p>12</p>
-                        </div>
+
                     </div>
                 </div>
             </section>
@@ -171,7 +177,7 @@
             <section class="Mainconsultation default">
                 <div class="inner">
                     <a href="" data-aos="fade-up">
-                        <h2>펌킨 펫하우스 1:1 상담</h2>
+                        <strong>펌킨 펫하우스 1:1 상담</strong>
                     </a>
                     <p data-aos="fade-up" data-aos-delay="500">펌킨 펫하우스에 대한 모든 것, 언제나 편하게 문의해 주세요!</p>
                 </div>
@@ -202,6 +208,9 @@
                 </div>
             </div>
         </footer>
+        <button class="totop">
+            <i class="xi-arrow-top"></i>
+        </button>
     </div>
 </body>
 
