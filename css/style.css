@@ -64,12 +64,6 @@
 
     }
 
-    .header .header_wrap {
-        max-width: 1200px;
-        margin: 0 auto;
-        line-height: 80px;
-        display: flex;
-    }
 
     .header .header_wrap .gnb {
         position: fixed;
@@ -82,7 +76,6 @@
         background: #f7f7f7;
 
         overflow: hidden;
-        /* padding: 80px 15px 0 15px; */
         text-align: center;
         transition: 0.5s;
 
@@ -466,8 +459,12 @@
 
 @media (max-width:768px) {
     .MainService .title h2 {
-        font-size: 32px;
-        line-height: 40px;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .MainService .title p {
+        margin: 0 0 8px 0;
     }
 
     .MainService .inner {
@@ -488,6 +485,34 @@
     }
 
     .MainService .inner .box img {}
+
+    .MainService .inner .box {
+        position: relative;
+    }
+
+    .MainService .inner .box:nth-child(odd) .left:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 0px;
+        height: 0px;
+        border-top: 0px solid #ffcb00;
+        border-left: 0px solid #ffcb00;
+    }
+
+
+
+    .MainService .inner .box:nth-child(even) .left:before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        width: 0px;
+        height: 0px;
+        border-bottom: 0px solid #ffcb00;
+        border-right: 0px solid #ffcb00;
+    }
 
     .MainService .inner .box .right {
         margin: 24px 0 0 0;
@@ -544,6 +569,37 @@
 .Mainconsultation .inner p {
     font-size: 18px;
     word-break: keep-all;
+}
+
+@media (max-width:768px) {
+    .Mainconsultation {
+        border-top: 1px solid #ddd;
+    }
+
+    .Mainconsultation .inner {
+        text-align: center;
+    }
+
+    .Mainconsultation .inner a strong {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+        border: 1px solid #ffcb00;
+        border-radius: 10px;
+        background: #ffcb00;
+        padding: 20px 52px;
+        margin: 0 0 24px 0;
+        word-break: keep-all;
+    }
+
+    .Mainconsultation .inner a strong:hover {
+        background: #fff;
+    }
+
+    .Mainconsultation .inner p {
+        font-size: 12px;
+        word-break: keep-all;
+    }
 }
 
 .footer {
